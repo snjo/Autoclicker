@@ -44,6 +44,7 @@
             this.UseCountdownInput = new System.Windows.Forms.CheckBox();
             this.StopWhenMouseMovesInput = new System.Windows.Forms.CheckBox();
             this.alwaysOnTopCheck = new System.Windows.Forms.CheckBox();
+            this.StopWhenControlIsPressed = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.durationInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clicksPerSecondInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startDelayInput)).BeginInit();
@@ -58,11 +59,10 @@
             // 
             this.toggleTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleTimer.Location = new System.Drawing.Point(7, 14);
-            this.toggleTimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.toggleTimer.MinimumSize = new System.Drawing.Size(100, 0);
+            this.toggleTimer.Location = new System.Drawing.Point(5, 9);
+            this.toggleTimer.MinimumSize = new System.Drawing.Size(67, 0);
             this.toggleTimer.Name = "toggleTimer";
-            this.toggleTimer.Size = new System.Drawing.Size(271, 35);
+            this.toggleTimer.Size = new System.Drawing.Size(181, 23);
             this.toggleTimer.TabIndex = 0;
             this.toggleTimer.Text = "start Clicking";
             this.toggleTimer.UseVisualStyleBackColor = true;
@@ -80,10 +80,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(12, 186);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "count click test";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,10 +91,9 @@
             // clickCountLabel
             // 
             this.clickCountLabel.AutoSize = true;
-            this.clickCountLabel.Location = new System.Drawing.Point(154, 284);
-            this.clickCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clickCountLabel.Location = new System.Drawing.Point(103, 191);
             this.clickCountLabel.Name = "clickCountLabel";
-            this.clickCountLabel.Size = new System.Drawing.Size(18, 20);
+            this.clickCountLabel.Size = new System.Drawing.Size(13, 13);
             this.clickCountLabel.TabIndex = 3;
             this.clickCountLabel.Text = "0";
             // 
@@ -106,8 +104,7 @@
             0,
             0,
             0});
-            this.durationInput.Location = new System.Drawing.Point(158, 146);
-            this.durationInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.durationInput.Location = new System.Drawing.Point(105, 101);
             this.durationInput.Maximum = new decimal(new int[] {
             600,
             0,
@@ -119,7 +116,7 @@
             0,
             0});
             this.durationInput.Name = "durationInput";
-            this.durationInput.Size = new System.Drawing.Size(120, 26);
+            this.durationInput.Size = new System.Drawing.Size(80, 20);
             this.durationInput.TabIndex = 4;
             this.durationInput.Value = new decimal(new int[] {
             10,
@@ -130,26 +127,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Duration (s)";
             // 
             // clicksPerSecondInput
             // 
-            this.clicksPerSecondInput.Location = new System.Drawing.Point(158, 189);
+            this.clicksPerSecondInput.Location = new System.Drawing.Point(105, 129);
+            this.clicksPerSecondInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clicksPerSecondInput.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.clicksPerSecondInput.Name = "clicksPerSecondInput";
-            this.clicksPerSecondInput.Size = new System.Drawing.Size(120, 26);
+            this.clicksPerSecondInput.Size = new System.Drawing.Size(80, 20);
             this.clicksPerSecondInput.TabIndex = 7;
             this.clicksPerSecondInput.Value = new decimal(new int[] {
-            20,
+            12,
             0,
             0,
             0});
@@ -157,31 +154,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 195);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(9, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Clicks per second";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 235);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(9, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 20);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Start delay (s)";
             // 
             // startDelayInput
             // 
-            this.startDelayInput.Location = new System.Drawing.Point(158, 228);
+            this.startDelayInput.Location = new System.Drawing.Point(105, 154);
+            this.startDelayInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startDelayInput.Name = "startDelayInput";
-            this.startDelayInput.Size = new System.Drawing.Size(120, 26);
+            this.startDelayInput.Size = new System.Drawing.Size(80, 20);
             this.startDelayInput.TabIndex = 8;
             this.startDelayInput.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});
@@ -189,11 +185,10 @@
             // UseCountdownInput
             // 
             this.UseCountdownInput.AutoSize = true;
-            this.UseCountdownInput.Checked = true;
-            this.UseCountdownInput.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.UseCountdownInput.Location = new System.Drawing.Point(18, 112);
+            this.UseCountdownInput.Location = new System.Drawing.Point(11, 79);
+            this.UseCountdownInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UseCountdownInput.Name = "UseCountdownInput";
-            this.UseCountdownInput.Size = new System.Drawing.Size(139, 24);
+            this.UseCountdownInput.Size = new System.Drawing.Size(101, 17);
             this.UseCountdownInput.TabIndex = 9;
             this.UseCountdownInput.Text = "Use countdown";
             this.UseCountdownInput.UseVisualStyleBackColor = true;
@@ -204,9 +199,10 @@
             this.StopWhenMouseMovesInput.AutoSize = true;
             this.StopWhenMouseMovesInput.Checked = true;
             this.StopWhenMouseMovesInput.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.StopWhenMouseMovesInput.Location = new System.Drawing.Point(18, 82);
+            this.StopWhenMouseMovesInput.Location = new System.Drawing.Point(11, 37);
+            this.StopWhenMouseMovesInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StopWhenMouseMovesInput.Name = "StopWhenMouseMovesInput";
-            this.StopWhenMouseMovesInput.Size = new System.Drawing.Size(206, 24);
+            this.StopWhenMouseMovesInput.Size = new System.Drawing.Size(145, 17);
             this.StopWhenMouseMovesInput.TabIndex = 9;
             this.StopWhenMouseMovesInput.Text = "Stop when mouse moves";
             this.StopWhenMouseMovesInput.UseVisualStyleBackColor = true;
@@ -217,19 +213,34 @@
             this.alwaysOnTopCheck.AutoSize = true;
             this.alwaysOnTopCheck.Checked = true;
             this.alwaysOnTopCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.alwaysOnTopCheck.Location = new System.Drawing.Point(18, 321);
+            this.alwaysOnTopCheck.Location = new System.Drawing.Point(12, 215);
+            this.alwaysOnTopCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.alwaysOnTopCheck.Name = "alwaysOnTopCheck";
-            this.alwaysOnTopCheck.Size = new System.Drawing.Size(126, 24);
+            this.alwaysOnTopCheck.Size = new System.Drawing.Size(92, 17);
             this.alwaysOnTopCheck.TabIndex = 10;
             this.alwaysOnTopCheck.Text = "Always on top";
             this.alwaysOnTopCheck.UseVisualStyleBackColor = true;
             this.alwaysOnTopCheck.CheckedChanged += new System.EventHandler(this.toggleAlwaysOnTopEvent);
             // 
+            // StopWhenControlIsPressed
+            // 
+            this.StopWhenControlIsPressed.AutoSize = true;
+            this.StopWhenControlIsPressed.Checked = true;
+            this.StopWhenControlIsPressed.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.StopWhenControlIsPressed.Location = new System.Drawing.Point(11, 58);
+            this.StopWhenControlIsPressed.Margin = new System.Windows.Forms.Padding(2);
+            this.StopWhenControlIsPressed.Name = "StopWhenControlIsPressed";
+            this.StopWhenControlIsPressed.Size = new System.Drawing.Size(182, 17);
+            this.StopWhenControlIsPressed.TabIndex = 11;
+            this.StopWhenControlIsPressed.Text = "Stop when Control/Caps pressed";
+            this.StopWhenControlIsPressed.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 357);
+            this.ClientSize = new System.Drawing.Size(193, 239);
+            this.Controls.Add(this.StopWhenControlIsPressed);
             this.Controls.Add(this.alwaysOnTopCheck);
             this.Controls.Add(this.StopWhenMouseMovesInput);
             this.Controls.Add(this.UseCountdownInput);
@@ -242,7 +253,6 @@
             this.Controls.Add(this.clickCountLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toggleTimer);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
@@ -273,6 +283,7 @@
         private System.Windows.Forms.CheckBox UseCountdownInput;
         private System.Windows.Forms.CheckBox StopWhenMouseMovesInput;
         private System.Windows.Forms.CheckBox alwaysOnTopCheck;
+        private System.Windows.Forms.CheckBox StopWhenControlIsPressed;
     }
 }
 

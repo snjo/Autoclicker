@@ -23,6 +23,7 @@ namespace AutoClicker
         private const int MOUSEEVENTF_RIGHTUP = 0x10;
 
         uint startX = 0;
+        bool lastCapsLockState;
 
         public int clickCount = 0;
 
@@ -35,10 +36,27 @@ namespace AutoClicker
         {
             uint X = (uint)Cursor.Position.X;
             uint Y = (uint)Cursor.Position.Y;
+            bool currentCapsLockState = Control.IsKeyLocked(Keys.CapsLock);
+            
             if (StopWhenMouseMovesInput.Checked)
             {
                 if (Math.Abs(startX - X) > 3) stopClicking();
             }
+            
+            if (StopWhenControlIsPressed.Checked)
+            {
+                if (currentCapsLockState != lastCapsLockState)
+                {
+                    stopClicking();
+                }
+                if (ModifierKeys.HasFlag(Keys.Control))
+                {
+                    stopClicking();
+                }
+            }
+            
+            
+            
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
         }
 
@@ -63,6 +81,7 @@ namespace AutoClicker
         private void startClicking()
         {
             startX = (uint)Cursor.Position.X;
+            lastCapsLockState = Control.IsKeyLocked(Keys.CapsLock);
             clickDuration.Interval = ((int)durationInput.Value) * 1000;
             clickInterval.Interval = (int)(1000 / clicksPerSecondInput.Value);            
             clickInterval.Start();
