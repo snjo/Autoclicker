@@ -107,7 +107,7 @@ namespace AutoClicker
 
         private void checkSafety(object sender, EventArgs e)
         {
-            if (!StopWhenMouseMovesInput.Checked && !UseCountdownInput.Checked)
+            if (!StopWhenMouseMovesInput.Checked && !UseCountdownInput.Checked && !StopWhenControlIsPressed.Checked)
             {
                 ((CheckBox)sender).Checked = true;                
                 System.Media.SystemSounds.Exclamation.Play();          

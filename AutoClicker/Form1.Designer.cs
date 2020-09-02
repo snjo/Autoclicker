@@ -136,7 +136,7 @@
             // clicksPerSecondInput
             // 
             this.clicksPerSecondInput.Location = new System.Drawing.Point(105, 129);
-            this.clicksPerSecondInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clicksPerSecondInput.Margin = new System.Windows.Forms.Padding(2);
             this.clicksPerSecondInput.Minimum = new decimal(new int[] {
             1,
             0,
@@ -172,7 +172,7 @@
             // startDelayInput
             // 
             this.startDelayInput.Location = new System.Drawing.Point(105, 154);
-            this.startDelayInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startDelayInput.Margin = new System.Windows.Forms.Padding(2);
             this.startDelayInput.Name = "startDelayInput";
             this.startDelayInput.Size = new System.Drawing.Size(80, 20);
             this.startDelayInput.TabIndex = 8;
@@ -186,7 +186,7 @@
             // 
             this.UseCountdownInput.AutoSize = true;
             this.UseCountdownInput.Location = new System.Drawing.Point(11, 79);
-            this.UseCountdownInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UseCountdownInput.Margin = new System.Windows.Forms.Padding(2);
             this.UseCountdownInput.Name = "UseCountdownInput";
             this.UseCountdownInput.Size = new System.Drawing.Size(101, 17);
             this.UseCountdownInput.TabIndex = 9;
@@ -200,7 +200,7 @@
             this.StopWhenMouseMovesInput.Checked = true;
             this.StopWhenMouseMovesInput.CheckState = System.Windows.Forms.CheckState.Checked;
             this.StopWhenMouseMovesInput.Location = new System.Drawing.Point(11, 37);
-            this.StopWhenMouseMovesInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StopWhenMouseMovesInput.Margin = new System.Windows.Forms.Padding(2);
             this.StopWhenMouseMovesInput.Name = "StopWhenMouseMovesInput";
             this.StopWhenMouseMovesInput.Size = new System.Drawing.Size(145, 17);
             this.StopWhenMouseMovesInput.TabIndex = 9;
@@ -214,7 +214,7 @@
             this.alwaysOnTopCheck.Checked = true;
             this.alwaysOnTopCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.alwaysOnTopCheck.Location = new System.Drawing.Point(12, 215);
-            this.alwaysOnTopCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.alwaysOnTopCheck.Margin = new System.Windows.Forms.Padding(2);
             this.alwaysOnTopCheck.Name = "alwaysOnTopCheck";
             this.alwaysOnTopCheck.Size = new System.Drawing.Size(92, 17);
             this.alwaysOnTopCheck.TabIndex = 10;
@@ -234,6 +234,7 @@
             this.StopWhenControlIsPressed.TabIndex = 11;
             this.StopWhenControlIsPressed.Text = "Stop when Control/Caps pressed";
             this.StopWhenControlIsPressed.UseVisualStyleBackColor = true;
+            this.StopWhenControlIsPressed.CheckedChanged += new System.EventHandler(this.checkSafety);
             // 
             // Form1
             // 
