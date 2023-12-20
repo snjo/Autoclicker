@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.clickInterval = new System.Windows.Forms.Timer(this.components);
             this.toggleTimer = new System.Windows.Forms.Button();
             this.clickDuration = new System.Windows.Forms.Timer(this.components);
@@ -254,9 +255,9 @@
             this.Controls.Add(this.clickCountLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toggleTimer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.Text = "AutoClicker";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.durationInput)).EndInit();
