@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace AutoClicker
 {
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public partial class Form1 : Form
     {
 
@@ -29,7 +23,7 @@ namespace AutoClicker
 
         public Form1()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void onTimer(object sender, EventArgs e)
@@ -37,12 +31,12 @@ namespace AutoClicker
             uint X = (uint)Cursor.Position.X;
             uint Y = (uint)Cursor.Position.Y;
             bool currentCapsLockState = Control.IsKeyLocked(Keys.CapsLock);
-            
+
             if (StopWhenMouseMovesInput.Checked)
             {
                 if (Math.Abs(startX - X) > 3) stopClicking();
             }
-            
+
             if (StopWhenControlIsPressed.Checked)
             {
                 if (currentCapsLockState != lastCapsLockState)
@@ -54,9 +48,9 @@ namespace AutoClicker
                     stopClicking();
                 }
             }
-            
-            
-            
+
+
+
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
         }
 
@@ -68,7 +62,7 @@ namespace AutoClicker
 
         private void disableClickingEvent(object sender, EventArgs e)
         {
-            stopClicking();            
+            stopClicking();
         }
 
         private void stopClicking()
@@ -83,7 +77,7 @@ namespace AutoClicker
             startX = (uint)Cursor.Position.X;
             lastCapsLockState = Control.IsKeyLocked(Keys.CapsLock);
             clickDuration.Interval = ((int)durationInput.Value) * 1000;
-            clickInterval.Interval = (int)(1000 / clicksPerSecondInput.Value);            
+            clickInterval.Interval = (int)(1000 / clicksPerSecondInput.Value);
             clickInterval.Start();
             if (UseCountdownInput.Checked) clickDuration.Start();
             waitForStart.Stop();
@@ -109,8 +103,8 @@ namespace AutoClicker
         {
             if (!StopWhenMouseMovesInput.Checked && !UseCountdownInput.Checked && !StopWhenControlIsPressed.Checked)
             {
-                ((CheckBox)sender).Checked = true;                
-                System.Media.SystemSounds.Exclamation.Play();          
+                ((CheckBox)sender).Checked = true;
+                System.Media.SystemSounds.Exclamation.Play();
             }
         }
 

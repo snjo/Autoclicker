@@ -1,5 +1,4 @@
 D:\Github\Autoclicker\AutoClicker\bin\Debug\net8.0-windows\AutoClicker.exe
-D:\Github\Autoclicker\AutoClicker\bin\Debug\net8.0-windows\AutoClicker.dll.config
 D:\Github\Autoclicker\AutoClicker\bin\Debug\net8.0-windows\AutoClicker.deps.json
 D:\Github\Autoclicker\AutoClicker\bin\Debug\net8.0-windows\AutoClicker.runtimeconfig.json
 D:\Github\Autoclicker\AutoClicker\bin\Debug\net8.0-windows\AutoClicker.dll
