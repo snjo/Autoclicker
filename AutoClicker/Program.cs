@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace AutoClicker
 {
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     static class Program
     {
         /// <summary>
@@ -13,7 +14,7 @@ namespace AutoClicker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
